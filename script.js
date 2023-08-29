@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function () {
      window.addEventListener('scroll',()=>{
         scrollbtn.classList.toggle('active',window.scrollY>500)
      })
-     window.addEventListener('click',()=>{
+     scrollbtn.addEventListener('click',()=>{
         this.document.body.scrollTop=0;
         this.document.documentElement.scrollTop=0;
      })
@@ -39,4 +39,15 @@ window.addEventListener('DOMContentLoaded', function () {
         }
         
      })
+     const body =document.querySelector('body')
+    const maxWidth=body.clientWidth,
+    maxHeight=body.clientHeight
+    console.log(maxHeight)
+    console.log(maxWidth)
+    setInterval(()=>{
+        if(maxWidth>body.clientWidth || maxHeight>body.clientHeight){
+            body.classList.add('body-crimson')
+            console.log(body.clientWidth)
+        }
+    },100)
 })

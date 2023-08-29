@@ -595,3 +595,7 @@ section{
     transform: translateY(0);
     opacity: 1;
 }
+.body-crimson{
+    background: crimson;
+    opacity: 0.6;
+}
